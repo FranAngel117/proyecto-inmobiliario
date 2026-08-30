@@ -3,11 +3,13 @@ Análisis y visualización de precios de viviendas usadas en la Región Metropol
 
 Integrantes: 
 
--
--
--
--
+-Francisco Javier Angel.
 
+-German Echeverri.
+
+-Rodrigo Plaza.
+
+-Constanza Venegas.
 
 Descripción
 -
