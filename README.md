@@ -1,89 +1,84 @@
-# Análisis del mercado inmobiliario de la Región Metropolitana
+Análisis y visualización de precios de viviendas usadas en la Región Metropolitana
+-
 
-## Integrantes
+Integrantes: 
 
-- German Echeverri
-- [Integrante 2]
-- [Integrante 3]
-- [Integrante 4]
-- [Integrante 5]
-- [Integrante 6]
+-Francisco Javier Angel.
 
-## Descripción del proyecto
+-German Echeverri.
 
-Este proyecto busca analizar el mercado inmobiliario de la Región Metropolitana de Chile a partir de datos de propiedades publicados durante 2023.
+-Rodrigo Plaza.
 
-El objetivo es estudiar cómo se relacionan los precios de las propiedades con sus características y ubicación, identificando diferencias entre comunas y patrones que puedan ser representados mediante visualizaciones.
+-Constanza Venegas.
 
-## Problemática
+Descripción
+-
 
-El mercado inmobiliario presenta importantes diferencias de precios dependiendo de la ubicación y las características de cada propiedad. Sin embargo, la gran cantidad de publicaciones disponibles dificulta identificar visualmente estos patrones.
+El mercado de viviendas usadas en la Región Metropolitana presenta diferencias de precios entre las distintas comunas y propiedades. Sin embargo, observar los precios de manera aislada no permite identificar fácilmente cómo se distribuyen territorialmente ni qué características presentan las viviendas de mayor y menor costo.
 
-## Motivación
+Este proyecto busca analizar y visualizar los precios de viviendas usadas de la Región Metropolitana, considerando su comuna y características como superficie construida, superficie total, cantidad de dormitorios, baños y estacionamientos.
 
-El análisis de estos datos puede permitir comprender mejor las diferencias existentes entre comunas y explorar qué características de las propiedades están asociadas a variaciones en sus precios.
+Motivación
+-
+La motivación del proyecto surge de la necesidad de comprender las diferencias existentes en los precios de las viviendas usadas dentro de la Región Metropolitana.
 
-## Pregunta inicial
+A través de la visualización de datos se busca facilitar la comparación entre comunas e identificar patrones que permitan observar qué características están presentes en las viviendas de mayor y menor costo.
 
-¿Cómo se relaciona el precio de las propiedades con sus características y ubicación en las comunas de la Región Metropolitana, a partir de los datos recopilados en 2023?
+Pregunta inicial
+-
+¿Cómo varían los precios de las viviendas usadas entre las comunas de la Región Metropolitana y qué características de las viviendas se asocian a precios más altos o más bajos?
 
-## Alcance
+Alcance
+-
+El proyecto estudiará la distribución de los precios de las viviendas usadas en las distintas comunas de la Región Metropolitana, utilizando como unidad de observación cada propiedad registrada en los datasets disponibles. El análisis se centrará en identificar diferencias territoriales en los precios y explorar su relación con características de las viviendas, principalmente superficie construida, superficie total, cantidad de dormitorios, baños y estacionamientos.
 
-El análisis se enfocará inicialmente en propiedades de la Región Metropolitana presentes en los datasets disponibles.
+El período de análisis estará determinado por las fechas de los datasets utilizados, correspondientes a marzo y julio de 2023. El estudio se limitará a las propiedades registradas en dichos conjuntos de datos y no busca representar la totalidad del mercado inmobiliario de la Región Metropolitana.
 
-Se estudiarán principalmente:
+Quedarán fuera del alcance factores que no se encuentran disponibles en los datos, como condiciones de financiamiento, antigüedad de la propiedad, estado de conservación, características del barrio o evolución histórica de los precios. Asimismo, el análisis buscará identificar patrones y asociaciones, pero no establecer relaciones causales entre las características de una vivienda y su precio.
 
-- Precio de las propiedades.
-- Comuna y ubicación.
-- Superficie construida.
-- Superficie total.
-- Número de dormitorios.
-- Número de baños.
-- Número de estacionamientos.
+Fuente de los datasets
+-
 
-El análisis se centrará en los datos recopilados durante 2023 y no contempla inicialmente la predicción de precios futuros.
+Se utilizarán dos datasets proporcionados para el proyecto:
 
-## Datasets
+https://www.kaggle.com/datasets/luisfelipetn/valor-casas-usadas-chile-rm-08032023
 
-### Precios Casas RM
+2023-03-08 Precios Casas RM.csv
 
-- Archivo: `2023-03-08 Precios Casas RM.csv`
-- Registros: 7.779
-- Cobertura: Región Metropolitana
-- Comunas: 51
+2023-07-18 Propiedades Web Scrape.csv
 
-### Propiedades Web Scrape
+Los datasets contienen registros de propiedades ubicadas en distintas comunas de la Región Metropolitana.
 
-- Archivo: `2023-07-18 Propiedades Web Scrape.csv`
-- Registros: 9.291
-- Cobertura: Región Metropolitana
-- Comunas: 52
+Breve descripción de los datos
+-
+Los datasets contienen información de viviendas y sus principales características. Cada registro representa una propiedad y cuenta con variables relacionadas con su precio, ubicación y atributos físicos.
 
-### Variables principales
+Las principales variables disponibles son:
+-
+Variable	     |          Descripción
 
-- `Price_CLP`: precio en pesos chilenos.
-- `Price_UF`: precio en UF.
-- `Price_USD`: precio en dólares.
-- `Comuna`: comuna de la propiedad.
-- `Ubicacion`: ubicación registrada.
-- `Dorms`: cantidad de dormitorios.
-- `Baths`: cantidad de baños.
-- `Built Area`: superficie construida.
-- `Total Area`: superficie total.
-- `Parking`: cantidad de estacionamientos.
-- `id`: identificador de la publicación.
-- `Realtor`: corredor o agencia inmobiliaria.
+Price_CLP	     |          Precio de la vivienda en pesos chilenos
 
-## Estructura del repositorio
+Price_UF	     |          Precio de la vivienda expresado en UF
 
-```text
-proyecto-inmobiliario/
-│
-├── data/
-│   ├── 2023-03-08 Precios Casas RM.csv
-│   └── 2023-07-18 Propiedades Web Scrape.csv
-│
-├── notebooks/
-│   └── exploracion.ipynb
-│
-└── README.md
+Price_USD	     |          Precio de la vivienda expresado en dólares
+
+Comuna	       |          Comuna donde se encuentra la propiedad
+
+Ubicacion	     |          Ubicación o referencia de la propiedad
+
+Dorms	         |          Cantidad de dormitorios
+
+Baths	         |          Cantidad de baños
+
+Built Area	   |          Superficie construida de la vivienda
+
+Total Area	   |          Superficie total del terreno o propiedad
+
+Parking	       |          Cantidad de estacionamientos
+
+id	           |          Identificador de la propiedad
+
+Realtor	       |          Corredora o agente asociado a la publicación, cuando está disponible
+
+El primer dataset contiene 7.779 registros, mientras que el segundo contiene 9.291 registros, para un total de 17.070 registros antes de cualquier proceso de limpieza, validación o eliminación de duplicados.
