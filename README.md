@@ -82,3 +82,17 @@ id	           |          Identificador de la propiedad
 Realtor	       |          Corredora o agente asociado a la publicación, cuando está disponible
 
 El primer dataset contiene 7.779 registros, mientras que el segundo contiene 9.291 registros, para un total de 17.070 registros antes de cualquier proceso de limpieza, validación o eliminación de duplicados.
+
+Instrucciones de ejecucion:
+Paso 1: Instalar Streamlit usando python -m
+En lugar de llamar a streamlit directamente, ejecuta la instalación a través de la carpeta oficial de Python:
+
+PowerShell
+python -m pip install streamlit pandas plotly
+(Si usas Python 3 con otro comando, también puedes probar con py -m pip install streamlit pandas plotly).
+
+Paso 2: Ejecutar la aplicación usando python -m
+Una vez terminada la instalación, ejecuta el servidor de Streamlit anteponiendo python -m:
+
+PowerShell
+python -m streamlit run app.py
